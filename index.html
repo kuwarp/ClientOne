@@ -128,11 +128,11 @@
                     <div class="down-buttons mt-3">
                       <div class="call-button">
                         <a  href="tel:918435808080"><h4 class="text-white "
-                          ><i class="fa fa-phone"></i>  91-8435808080</h4
+                          ><i class="fa fa-phone"></i>  +91-8435808080</h4
                         ></a>
                       </div>
                       <div class="call-button mx-lg-4">
-                      <a href="tel:918435808080">  <h4 class="text-white" href="#"><i class="fa fa-phone"></i> 91-8435808080</h4></a>
+                      <a href="tel:918965808080">  <h4 class="text-white" href="#"><i class="fa fa-phone"></i> +91-8965808080</h4></a>
                       </div>
                     </div>
                   </div>
@@ -144,13 +144,13 @@
                     <h3 class="text-white">We value the time and quality of your trading</h3>
                     <div class="down-buttons">
                       <div class="call-button">
-                        <a href="tel:918435808080"
-                          > <h4 class="text-white "><i class="fa fa-phone"></i> 91-8435808080</h4></a
+                        <a href="tel:918965808080"
+                          > <h4 class="text-white "><i class="fa fa-phone"></i> +91-8965808080</h4></a
                         >
                       </div>
                       <div class="call-button mx-lg-4 ">
                         <a href="tel:918435808080"
-                          > <h4 class="text-white"> <i class="fa fa-phone"></i> 91-8435808080</h4></a
+                          > <h4 class="text-white"> <i class="fa fa-phone"></i> +91-8435808080</h4></a
                         >
                       </div>
                     </div>
@@ -505,18 +505,18 @@
               <div class="info">
                 <span
                   ><i class="fa fa-phone"></i>
-                  <a class="text-white" href="#">010-020-0340<br />090-080-0760</a></span
+                  <a class="text-white" href="tel:918435808080"> +91-8435808080</a></span
                 >
                 <span
-                  ><i class="fa fa-envelope"></i>
-                  <a class="text-white" href="#">info@company.com<br />mail@company.com</a></span
+                  ><i class="fa fa-phone"></i>
+                  <a class="text-white" href="tel:918965808080">+91-8965808080</a></span
                 >
               </div>
             </div>
           </div>
           <div class="col-lg-5 align-self-center">
          
-            <form id="contact" action="" method="get">
+            <form id="contact" name="Sheet1" onsubmit="handleSubmit()">
               <h3 class="mx-auto display-5">Contact Form</h3>
               <div class="row">
                 <div class="col-lg-12">
@@ -587,9 +587,9 @@
             <div class="about footer-item">
               <div class="logo">
                 <a href="#"
-                  ><img 
-                    src="assets/images/logo.png"
-                    alt="Onix Digital TemplateMo"
+                  ><img class="rounded-circle w-50" 
+                    src="assets/images/vmg.png"
+                    alt=""
                 /></a>
               </div>
               <a href="#">vmoney.online</a>
@@ -638,6 +638,26 @@
     </footer>
 
     <!-- Scripts -->
+    <script>
+      const scriptUrl = "https://script.google.com/macros/s/AKfycbx78MIE3H7k3Vg8HBRGCFe26W08zQQ1vSozLdknw6kZkuI9Q05JNyddVHSfHUUu3t8W/exec"
+    
+    const handleSubmit = (e) =>{
+      e.preventDefault()
+      showresult(true)
+    
+      fetch(scriptUrl, {
+        mode: 'no-cors',
+        method: 'POST',
+        body : new FormData(formRef.current),
+      }).then (res => {
+        console.log(res);
+        console.log("Successful");
+        showresult(false)
+      })
+      .catch(err => console.log(err))
+      e.target.reset();
+    }
+    </script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/owl-carousel.js"></script>

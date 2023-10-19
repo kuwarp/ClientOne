@@ -1833,7 +1833,7 @@ footer .footer-item h4 {
 }
 
 footer .about .logo img {
-  width: 89px;
+  max-width: 340px;
   margin-bottom: 30px;
 }
 
