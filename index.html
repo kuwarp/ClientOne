@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" href="./assets/images/vmg.png" type="image/x-icon">
 
     <title>Vmoney-Discover Online Dabba Trading</title>
 
@@ -72,7 +73,7 @@
             <nav class="main-nav">
               <!-- ***** Logo Start ***** -->
               <a href="index.html" class="logo ">
-                <img class="w-25" src="assets/images/logo.png" />
+                <img class="w-25" src="assets/images/vmg12.png" />
               </a>
               <!-- ***** Logo End ***** -->
               <!-- ***** Menu Start ***** -->
@@ -266,7 +267,7 @@
                   <div class="fact-item">
                     <div class="count-area-content">
                       <div class="">
-                        <img class="w-75" src="assets/images/247.png" alt="" />
+                        <img class="about-img" src="assets/images/247.png" alt="" />
                       </div>
                       <div class="count-digit"></div>
                       <div class="count-tits">24×7 support</div>
@@ -279,9 +280,9 @@
                   <div class="fact-item">
                     <div class="count-area-content">
                       <div >
-                        <img class="" src="assets/images/lev.png" alt="" />
+                        <img class="about-img" src="assets/images/lev.png" alt="" />
                       </div>
-                      <!-- <div class="count-digit">120</div> -->
+                      <div class="count-digit"></div>
                       <div class="count-tits">highest trading leverage</div>
                       <!-- <p>Lorem ipsum dolor sitti amet, consectetur.</p> -->
                     </div>
@@ -657,13 +658,13 @@
     <script> 
       const scriptURL="https://script.google.com/macros/s/AKfycbwvjdfZ3A_3r-QUTb8vg1ox9AU_ji5qwAZkN9MDR_Jbp9ykCmqiFxvFr0RqtdmY5TX3UA/exec"
       const form = document.forms['google-sheet']
-          
-          form.addEventListener('submit', e => {
-          
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-              .then(response => { response, console.log( response)} )
-              .catch(error => console.error('Error!', error.message))
-          })
+      
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response =>window.location.href="index.html")
+          .catch(error => console.error('Error!', error.message))
+      })
            </script>
 
 

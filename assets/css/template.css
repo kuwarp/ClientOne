@@ -1789,6 +1789,10 @@ form#contact input::placeholder {
   color: #afafaf;
 }
 
+.about-img{
+  width: 54px;
+}
+
 form#contact button {
   display: inline-block;
   background-color: #03a4ed;
