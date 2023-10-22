@@ -266,7 +266,7 @@
                   <div class="fact-item">
                     <div class="count-area-content">
                       <div class="">
-                        <img class="" src="assets/images/247.png" alt="" />
+                        <img class="w-75" src="assets/images/247.png" alt="" />
                       </div>
                       <div class="count-digit"></div>
                       <div class="count-tits">24×7 support</div>
@@ -520,66 +520,64 @@
           </div>
           <div class="col-lg-5 align-self-center">
          
-            <form id="contact" class="text-black-50" name="Sheet1" onsubmit="handleSubmit()">
+            <form id="contact" class="text-black-50" name="google-sheet" >
               <h3 class="mx-auto display-5">Contact Form</h3>
               <div class="row">
                 <div class="col-lg-12">
-                  <fieldset>
+                 
                     <input
-                      type="name"
+                      type="text"
                       name="name"
                       id="name"
                       placeholder="Name"
                       autocomplete="on"
                       required
                     />
-                  </fieldset>
+                 
                 </div>
                 
                 <div class="col-lg-12">
-                  <fieldset>
+                 
                     <input
                       type="number"
-                      name="mobile"
+                      name="phone"
                       id="name"
                       placeholder="mobile no"
                       autocomplete="on"
                       required
                     />
-                  </fieldset>
+                 
                 </div>
                 
                 <div class="col-lg-12">
-                  <fieldset>
+                 
                     <input
-                      type="text"
+                      type="email"
                       name="email"
                       id="email"
                       pattern="[^ @]*@[^ @]*"
                       placeholder="Your Email"
                       required=""
                     />
-                  </fieldset>
+                 
                 </div>
                 <div class="col-lg-12">
-                  <fieldset>
+                 
                     <input
                       type="text"
-                      name="Message"
+                      name="message"
                       id="message"
                       placeholder="Your Message"
                       autocomplete="on"
                       required
                     />
-                  </fieldset>
+                 
                 </div>
             
                 <div class="col-lg-12">
-                  <fieldset>
-                    <button type="submit" id="form-submit" class="main-button">
-                      Submit Request
-                    </button>
-                  </fieldset>
+                 
+                    <input type="submit" class="" value="send Us">
+                  
                 </div>
               </div>
             </form>
@@ -656,26 +654,19 @@
     </footer>
 
     <!-- Scripts -->
-    <script>
-      const scriptUrl = "https://script.google.com/macros/s/AKfycbx78MIE3H7k3Vg8HBRGCFe26W08zQQ1vSozLdknw6kZkuI9Q05JNyddVHSfHUUu3t8W/exec"
-    
-    const handleSubmit = (e) =>{
-      e.preventDefault()
-      showresult(true)
-    
-      fetch(scriptUrl, {
-        mode: 'no-cors',
-        method: 'POST',
-        body : new FormData(formRef.current),
-      }).then (res => {
-        console.log(res);
-        console.log("Successful");
-        showresult(false)
-      })
-      .catch(err => console.log(err))
-      e.target.reset();
-    }
-    </script>
+    <script> 
+      const scriptURL="https://script.google.com/macros/s/AKfycbwvjdfZ3A_3r-QUTb8vg1ox9AU_ji5qwAZkN9MDR_Jbp9ykCmqiFxvFr0RqtdmY5TX3UA/exec"
+      const form = document.forms['google-sheet']
+          
+          form.addEventListener('submit', e => {
+          
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              .then(response => { response, console.log( response)} )
+              .catch(error => console.error('Error!', error.message))
+          })
+           </script>
+
+
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/owl-carousel.js"></script>
