@@ -333,6 +333,7 @@ header
   text-transform: uppercase;
   letter-spacing: 2px;
   float: left;
+  width: 87px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -925,6 +926,7 @@ Banner Style
 
 .main-banner .item .down-buttons {
   display: inline-flex;
+  /* flex-direction: column; */
 }
 
 .main-banner .item .down-buttons .call-button i {
@@ -2024,6 +2026,8 @@ responsive
 @media (max-width: 767px) {
   .main-banner .item .down-buttons {
     display: inline-block;
+    flex-direction: column;
+    margin-top: 12px;
   }
   .main-banner .item .down-buttons .main-blue-button {
     margin-right: 0px;
@@ -2031,6 +2035,7 @@ responsive
   }
   .main-banner .item .down-buttons .call-button a {
     margin-left: 0px;
+   
   }
   .subscribe .inner-content:after {
     z-index: -1;

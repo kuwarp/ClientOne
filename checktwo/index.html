@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="f.css" />
 
     <link rel="stylesheet" id="elementor-frontend-css" href="./fe.min.css" media="all" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <!-- My end -->
 
@@ -2308,7 +2309,46 @@
                     </section>
                 </div>
             </div>
+            <a href="https://wa.link/vjuho8" class="float " target="_blank">
+                <i class="fa fa-whatsapp pulse-element fa-5x  my-float"></i>
+                
+                </a>
         </footer>
+        <style>
+            .float {
+      position: fixed;
+      width: 84px; /* Increased width */
+      height: 82px; /* Increased height */
+      bottom: 40px;
+      right: 40px;
+      background-color: #25d366; /* Change the background color as needed */
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 40px; /* Increased font size */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+            /* Define the pulse animation */
+            @keyframes pulse {
+                0% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1.4);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+      
+            /* Apply the pulse animation to the element */
+            .pulse-element {
+                animation: pulse 2s infinite;
+            }
+        </style>
+
     </div>
     <!-- #page -->
     <link rel="stylesheet" id="jeg-dynamic-style-css"
